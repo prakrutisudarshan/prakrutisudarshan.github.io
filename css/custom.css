@@ -1,0 +1,57 @@
+/* Ensure the container takes up full width */
+.image-text-container {
+  border: 2px solid #782424;  /* Border around the box */
+  padding: 20px;  /* Increase internal space */
+  margin: 20px auto;  /* Margin around the box */
+  width: 100%;  /* Full width of parent container */
+  box-sizing: border-box;  /* Include padding/border in total width */
+  display: flex;  /* Flexbox for image and text layout */
+  justify-content: flex-start; /* Spread image and text across available space */
+  align-items: flex-start;  /* Align items to the top of the container */
+
+  flex-direction: row;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+  }
+}
+
+/* Image style */
+.image-text-container img {
+  width: 40%;  /* Adjust image width to 40% of the container width */
+  margin-right: 20px;  /* Space between the image and text */
+  object-fit: cover;  /* Make image cover without distortion */
+
+
+  @media (max-width: 600px) {
+    width: 100%;
+  }
+}
+
+/* Text container */
+.image-text-container div {
+  flex-grow: 1;  /* Allow text to grow and fill the available space */
+  overflow: hidden;  /* Prevent text overflow */
+  /* padding-left: 30px;  Add a little padding on the left for spacing */
+  text-align: justify;
+}
+
+.measure-wide {
+  max-width: 85%;  /* Limit the width of the text container */
+}
+
+.pv4-l{
+  padding-top: 5em;
+}
+
+a {
+  color: #424285; /* Your desired color */
+  text-decoration: none; /* Removes underline */
+}
+
+a:hover {
+  color: #821919; /* Change color on hover */
+  text-decoration: underline; /* Adds underline on hover */
+}
+	
+
